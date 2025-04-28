@@ -9,7 +9,7 @@ function HyperstackVMManager() {
   const callApi = useCallback(async (method, path, data = null) => {
     try {
       const response = await axios({
-        method: method,
+        method: 'POST',
         url: '/api/hyperstack', // Use the relative path to the Netlify function
         // Send original path and method in the request body or headers
         data: {
